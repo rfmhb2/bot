@@ -1,0 +1,41 @@
+[
+    {
+        "name": "mgp25/telegram-bot-api",
+        "version": "v1.1.1",
+        "version_normalized": "1.1.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/mgp25/Telegram-Bot-API.git",
+            "reference": "b3e4140729fd9f842f1b8b3ec9832fa97b03e8bb"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/mgp25/Telegram-Bot-API/zipball/b3e4140729fd9f842f1b8b3ec9832fa97b03e8bb",
+            "reference": "b3e4140729fd9f842f1b8b3ec9832fa97b03e8bb",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "php": ">=5.5"
+        },
+        "time": "2017-02-15T19:43:01+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "src/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "Telegram Bot PHP API",
+        "keywords": [
+            "Telegram-API",
+            "Telegram-Bot-API",
+            "Telegram-Bot-PHP",
+            "telegram"
+        ]
+    }
+]

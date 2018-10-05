@@ -1,0 +1,15 @@
+{
+  "name": "reservs/bot",
+  "description": "telegram bot for reservs.ir",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "mohammad hassan rt",
+      "email": "mohammadhassanbolivand@gmail.com"
+    }
+  ],
+  "require": {
+    "mgp25/telegram-bot-api": "v1.1.1"
+  }
+}
