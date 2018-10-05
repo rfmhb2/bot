@@ -6,7 +6,7 @@
  * Time: 05:43 PM
  */
 include 'vendor/autoload.php';
-$telegram = new telegramBot('623045896:AAFT89eXGayhB7G6wlIEty-01vSuRmjXDgI');
+$telegram = new telegramBot('BOT-TOKEN');
 $chat_id = @$_GET['chat_id'];
 $text = @$_GET['text'];
 if (isset($chat_id) && isset($text)) {
