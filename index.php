@@ -11,8 +11,10 @@ $chat_id = @$_GET['chat_id'];
 $text = @$_GET['text'];
 if (isset($chat_id) && isset($text)) {
     $telegram->sendMessage($chat_id, $text);
+    echo "message sent";
 }
 $update = $telegram->getWebhookUpdates();
 $chat_id = $update['message']['chat']['id'];
 $text="کد شناسایی شما در سامانه ورزشی رزرو: $chat_id";
 $telegram->sendMessage($chat_id, $text);
+echo "chat id sent";
