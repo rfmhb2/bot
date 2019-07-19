@@ -12,21 +12,19 @@ $fcmFields = [
     'priority' => 'high',
     'notification' => $fcmMsg
 ];
-$client = new Client();
-try {
-    $url = 'https://fcm.googleapis.com/fcm/send';
-    $headers = [
-        'Content-Type:application/json',
-        'Authorization:key= AIzaSyAC2ZEvHoLuJ4qPq9jL6cVzS3z4FBcZ8zI'
-    ];
-    $res = $client->post($url, [
-        compact('headers'),
-        'form_params' => [
-            $fcmFields
-        ]
-    ]);
-    return $res;
-
-} catch (GuzzleException $e) {
-    return $e->getMessage();
-}
+$url = 'https://fcm.googleapis.com/fcm/send';
+$headers = [
+    'Content-Type:application/json',
+    'Authorization:key= AIzaSyAC2ZEvHoLuJ4qPq9jL6cVzS3z4FBcZ8zI'
+];
+$ch = curl_init();
+curl_setopt( $ch,CURLOPT_URL, $url );
+curl_setopt( $ch,CURLOPT_POST, true );
+curl_setopt( $ch,CURLOPT_HTTPHEADER, $headers );
+curl_setopt( $ch,CURLOPT_RETURNTRANSFER, true );
+curl_setopt( $ch,CURLOPT_SSL_VERIFYPEER, false );
+curl_setopt( $ch,CURLOPT_POSTFIELDS, json_encode( $fcmFields ) );
+$result = curl_exec($ch );
+curl_close( $ch );
+echo $result . "\n\n";
+?>
