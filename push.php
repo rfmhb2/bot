@@ -15,7 +15,7 @@ $fcmFields = [
 $url = 'https://fcm.googleapis.com/fcm/send';
 $headers = [
     'Content-Type:application/json',
-    'Authorization:key= AIzaSyAC2ZEvHoLuJ4qPq9jL6cVzS3z4FBcZ8zI'
+    'Authorization:key= YOUR-TOKEN'
 ];
 $ch = curl_init();
 curl_setopt( $ch,CURLOPT_URL, $url );
