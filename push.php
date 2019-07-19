@@ -8,7 +8,7 @@ $fcmMsg = [
     'color' => "#203E78"
     ];
 $fcmFields = [
-    'to' => $fcmToken,
+    'to' => $_GET['fcmToken'],
     'priority' => 'high',
     'notification' => $fcmMsg
 ];
