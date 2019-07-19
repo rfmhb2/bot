@@ -12,6 +12,7 @@ $text = @$_GET['text'];
 if (isset($chat_id) && isset($text)) {
     $telegram->sendMessage($chat_id, $text);
     echo "message sent";
+    return;
 }
 $update = $telegram->getWebhookUpdates();
 $chat_id = $update['message']['chat']['id'];
